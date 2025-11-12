@@ -196,6 +196,13 @@ body.dark-mode .message.bot {
     background-clip: text;
     cursor: pointer;
     transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    -webkit-text-fill-color: initial;
+    background: none;
 }
 
 .logo:hover {
