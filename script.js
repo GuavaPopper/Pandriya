@@ -344,7 +344,7 @@ function initChatbot() {
         
         // Get AI response from backend
         try {
-            const response = await fetch(`${API_BASE_URL}/ai/chat`, {
+            const response = await fetch(`${API_BASE_URL}/ai-chat`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -408,7 +408,7 @@ async function generateAIReport() {
     `;
     
     try {
-        const response = await fetch(`${API_BASE_URL}/ai/report`, {
+        const response = await fetch(`${API_BASE_URL}/ai-report`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
