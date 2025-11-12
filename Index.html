@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Solusi IoT & Umpan Alami untuk melindungi panen jambu kristal dari serangan lalat buah di Desa Rasau Jaya Tiga">
+    <meta name="keywords" content="IoT, Pertanian, Jambu Kristal, Lalat Buah, Dashboard, AI">
+    <meta name="author" content="Tim Pandriya - Innovillage 6th">
+    <title>Pandriya - Solusi IoT Smart Farming | Innovillage 6th</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <!-- Header / Navigasi -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">🌿 Pandriya</div>
+            
+            <ul class="nav-links">
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#masalah">Masalah</a></li>
+                <li><a href="#solusi">Solusi</a></li>
+                <li><a href="#dampak">Dampak</a></li>
+                <li><a href="#demo" class="btn-primary">Dashboard Demo</a></li>
+                <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+            </ul>
+            
+            <button id="menu-btn" class="mobile-menu-btn" aria-label="Toggle menu">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="#beranda">Beranda</a>
+            <a href="#masalah">Masalah</a>
+            <a href="#solusi">Solusi</a>
+            <a href="#dampak">Dampak</a>
+            <a href="#demo">Dashboard Demo</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Bagian 1: Hero / Beranda -->
+        <section id="beranda" class="hero">
+            <div class="hero-content">
+                <span class="hero-badge">🏆 Tim Pandriya - Innovillage 6th</span>
+                <h1>Solusi IoT & Umpan Alami untuk Lindungi Panen Jambu Kristal</h1>
+                <p>
+                    Mengatasi serangan lalat buah di Desa Rasau Jaya Tiga dengan perangkap pintar bertenaga surya, 
+                    terintegrasi dashboard AI dan umpan organik Daun Melada yang ramah lingkungan.
+                </p>
+                <a href="#demo" class="btn-primary">🚀 Lihat Dashboard Demo</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://placehold.co/600x400/388E3C/FFFFFF?text=Ilustrasi+Jambu+Kristal&font=sans" 
+                     alt="Ilustrasi perkebunan jambu kristal yang sehat" 
+                     loading="lazy"
+                     onerror="this.src='https://placehold.co/600x400/E0E0E0/757575?text=Gagal+Muat+Gambar&font=sans'">
+            </div>
+        </section>
+
+        <!-- Bagian 2: Masalah -->
+        <section id="masalah" class="section">
+            <div class="section-header">
+                <h2>⚠️ Permasalahan di Desa Rasau Jaya Tiga</h2>
+                <p>
+                    Bagian ini menjelaskan konteks dan urgensi masalah yang dihadapi petani. Jambu kristal adalah komoditas vital 
+                    di Desa Rasau Jaya Tiga, namun keberadaannya terancam oleh hama lalat buah yang berdampak langsung pada ekonomi petani.
+                </p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <h3>🍃 Komoditas Andalan</h3>
+                    <p>
+                        Jambu kristal adalah andalan petani karena harga jual stabil dan didukung tanah subur (kaya Nitrogen & Fosfor). 
+                        Ini adalah tulang punggung ekonomi pertanian desa.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>🐛 Ancaman Hama Serius</h3>
+                    <p>
+                        Tantangan utamanya adalah serangan lalat buah (<em>Bactrocera sp.</em>) yang masif. 
+                        Hama ini merusak kualitas dan menurunkan kuantitas panen secara signifikan.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>💰 Dampak Ekonomi Langsung</h3>
+                    <p>
+                        Gagal panen akibat serangan hama berdampak langsung pada penurunan pendapatan petani, 
+                        mengancam ketahanan pangan, dan menghambat pertumbuhan sektor hortikultura lokal.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian 3: Solusi -->
+        <section id="solusi" class="section">
+            <div class="section-header">
+                <h2>💡 Solusi Inovatif "Pandriya"</h2>
+                <p>
+                    Solusi kami adalah sistem terintegrasi yang menggabungkan perangkat keras di lapangan dengan platform digital pintar. 
+                    Bagian ini menjelaskan komponen inti dari inovasi kami, dari perangkap fisik hingga dashboard AI.
+                </p>
+            </div>
+
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="content-hw">Perangkat Keras</button>
+                <button class="tab-btn" data-tab="content-sw">Perangkat Lunak</button>
+            </div>
+
+            <div id="content-hw" class="tab-content active">
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <span class="feature-icon">🪤</span>
+                        <h3>Alat Perangkap</h3>
+                        <p>Unit perangkap lalat buah yang dirancang efektif untuk dipasang di area kebun.</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🌿</span>
+                        <h3>Umpan Alami</h3>
+                        <p>Menggunakan ekstrak Daun Melada (<em>Piper Colubrinum Link</em>) sebagai umpan organik yang ramah lingkungan.</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">📡</span>
+                        <h3>Sensor IoT</h3>
+                        <p>Sensor untuk memantau data (jumlah Lalat Buah, status umpan) secara <em>real-time</em>.</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">☀️</span>
+                        <h3>Tenaga Surya</h3>
+                        <p>Sistem mandiri energi dengan panel surya, cocok untuk kondisi kebun yang jauh dari listrik.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="content-sw" class="tab-content">
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>🖥️ Platform Digital & Personalisasi</h3>
+                        <ul style="list-style: disc; padding-left: 1.5rem; margin-top: 1rem; line-height: 1.8;">
+                            <li>Membangun <strong>website monitoring</strong> sebagai dashboard pusat bagi petani.</li>
+                            <li>Fitur <strong>onboarding (pendaftaran)</strong> untuk memasukkan data personal seperti luas kebun dan lokasi.</li>
+                            <li>Setiap petani mendapat <strong>dashboard terpersonalisasi</strong> yang hanya menampilkan data dari alat di kebun mereka.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>🤖 Penerapan SafeAI</h3>
+                        <ul style="list-style: disc; padding-left: 1.5rem; margin-top: 1rem; line-height: 1.8;">
+                            <li><strong>AI untuk Laporan:</strong> Analisis data sensor untuk menghasilkan laporan otomatis tingkat serangan Lalat Buah.</li>
+                            <li><strong>AI Chatbot:</strong> Chatbot inklusif di website untuk menjawab pertanyaan dasar petani (kapan ganti umpan, dll).</li>
+                            <li>AI dirancang <strong>aman, etis, dan mudah digunakan</strong> oleh petani.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian 4: Dampak & Keberlanjutan -->
+        <section id="dampak" class="section">
+            <div class="section-header">
+                <h2>🌱 Dampak Sosial & Keberlanjutan</h2>
+                <p>
+                    Proyek kami tidak berhenti pada penyerahan alat. Bagian ini merinci fokus kami pada pemberdayaan masyarakat 
+                    untuk memastikan dampak jangka panjang dan kemandirian, yang merupakan inti dari nilai sosial proyek ini.
+                </p>
+            </div>
+
+            <div class="impact-grid">
+                <div class="impact-image">
+                    <img src="https://placehold.co/600x400/FB8C00/FFFFFF?text=Sosialisasi+Petani&font=sans" 
+                         alt="Ilustrasi kegiatan sosialisasi dengan petani" 
+                         loading="lazy"
+                         onerror="this.src='https://placehold.co/600x400/E0E0E0/757575?text=Gagal+Muat+Gambar&font=sans'">
+                </div>
+                
+                <div class="impact-list">
+                    <div class="impact-item">
+                        <div class="impact-number">1</div>
+                        <div class="impact-content">
+                            <h4>Sosialisasi & Pelatihan</h4>
+                            <p>Melakukan sosialisasi langsung kepada kelompok petani mengenai cara kerja alat dan cara membaca data di platform digital.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="impact-item">
+                        <div class="impact-number">2</div>
+                        <div class="impact-content">
+                            <h4>Transfer Pengetahuan (SOP)</h4>
+                            <p>Memberikan panduan prosedur (SOP) sederhana agar petani dapat <strong>membuat umpan Daun Melada secara mandiri</strong> dan melakukan perawatan dasar perangkat.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="impact-item">
+                        <div class="impact-number">3</div>
+                        <div class="impact-content">
+                            <h4>Tujuan Akhir</h4>
+                            <p>Melindungi panen, menjaga stabilitas pendapatan petani, dan menciptakan ekosistem pertanian yang lebih tangguh dan berkelanjutan di desa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian 5: Dashboard Demo -->
+        <section id="demo" class="section">
+            <div class="section-header">
+                <h2>📊 Dashboard Demo Interaktif</h2>
+                <p>
+                    Ini adalah demonstrasi dari dashboard yang akan dilihat petani. Bagian ini mensimulasikan data real-time dari sensor IoT, 
+                    menunjukkan laporan, dan cara kerja chatbot AI, sesuai dengan nilai "Personalize" dari Innovillage.
+                </p>
+            </div>
+
+            <div class="dashboard-wrapper">
+                <div class="dashboard-header">
+                    <h3>Dashboard Petani: <span class="gradient-text">Kebun Pak Budi</span></h3>
+                    <p>📍 Luas Kebun: 2 Hektar</p>
+                </div>
+
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">Status Perangkap</div>
+                        <div class="stat-value">AKTIF</div>
+                        <div class="stat-info">5 dari 5 unit online</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Lalat Buah Terdeteksi (24j)</div>
+                        <div class="stat-value">127</div>
+                        <div class="stat-info">Perlu pengecekan</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Status Umpan</div>
+                        <div class="stat-value">80%</div>
+                        <div class="stat-info">Estimasi ganti: 3 hari lagi</div>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 2rem;">
+                    <div class="dashboard-card">
+                        <h4 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem;">📈 Tren Lalat Buah Terdeteksi (7 Hari Terakhir)</h4>
+                        <div class="chart-container">
+                            <canvas id="hamaChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                    <div class="dashboard-card">
+                        <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">🤖 Laporan AI</h4>
+                        <div id="ai-report" style="font-size: 0.95rem; line-height: 1.6; color: #666;">
+                            <div class="loading-spinner" style="text-align: center; padding: 1rem;">
+                                <span>⏳ Menghasilkan laporan AI...</span>
+                            </div>
+                        </div>
+                        <button id="refresh-report" class="btn-secondary" style="margin-top: 1rem; display: none;">
+                            🔄 Refresh Laporan
+                        </button>
+                    </div>
+                    
+                    <div class="chatbot-container">
+                        <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem;">💬 Chatbot AI Pandriya</h4>
+                        <div class="chat-messages" id="chat-messages">
+                            <div class="message bot">Halo Pak Budi! Saya asisten AI Pandriya. Ada yang bisa saya bantu? 😊</div>
+                        </div>
+                        <div class="chat-input-container" style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                            <input type="text" id="chat-input" placeholder="Tanya sesuatu..." 
+                                   style="flex: 1; padding: 0.75rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 0.95rem;">
+                            <button id="chat-send" class="btn-primary" style="padding: 0.75rem 1.5rem;">
+                                Kirim
+                            </button>
+                        </div>
+                        <div id="chat-loading" style="display: none; text-align: center; margin-top: 0.5rem; color: #666;">
+                            <span>💭 AI sedang berpikir...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">🌿 Tim Pandriya</p>
+            <p>&copy; 2025 Innovillage 6th. Dibuat untuk memberdayakan petani Desa Rasau Jaya Tiga.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram">📷</a>
+                <a href="#" aria-label="Twitter">🐦</a>
+                <a href="#" aria-label="LinkedIn">💼</a>
+                <a href="#" aria-label="Email">✉️</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

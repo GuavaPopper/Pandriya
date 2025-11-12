@@ -1,0 +1,28 @@
+# Environment variables
+.env
+env.js
+
+# Node modules
+node_modules/
+package-lock.json
+
+# Logs
+*.log
+
+# Netlify
+.netlify/
+# Local Netlify folder
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.vscode/
+.idea/
+
+# Node modules (if using Node.js in the future)
+node_modules/
+
+# Logs
+*.log
