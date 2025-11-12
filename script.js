@@ -35,8 +35,8 @@ const DASHBOARD_DATA = {
 // Gemini API Configuration
 // MENGGUNAKAN NETLIFY FUNCTIONS!
 const API_BASE_URL = window.location.hostname === 'localhost' 
-    ? 'http://localhost:3000/api'  // Local development
-    : '/.netlify/functions';        // Production (Netlify)
+    ? 'http://localhost:3000/api'     // Local development
+    : '/.netlify/functions';           // Production (Netlify)
 
 console.log('🌐 Environment:', window.location.hostname === 'localhost' ? 'Development' : 'Production');
 console.log('🔗 API Base URL:', API_BASE_URL);
